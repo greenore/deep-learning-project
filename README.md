@@ -1,7 +1,7 @@
-# Deep learning - Predicting movie genres
-**cs109B (Spring 2017) Final Project**<br>
+# CS109B Project Group 29
+**"Predicting Movie Genres"**<br>
+**CS109B (Spring 2017) Final Project**<br>
 Calvin J Chiew, Ji Hua, Tim Hagmann<br>
-TF: tbd<br>
 
 ## Background
 The overall theme of the final project is movie data with a focus on movie genre prediction, because it is an area where we all are more or less application domain experts. First, you will explore your data and the challenges of the problem by exploratory data analysis. Use visualizations to find features that correlate with movie genres. These can be extracted from the movie posters, or meta data, or other data you gather, for example plot summaries or even movie transcripts. You will then compare traditional statistical or machine learning methods like generalized additive models, random forest, Bayesian prediction methods, boosting, and SVM, to deep learning models for movie genre prediction.
