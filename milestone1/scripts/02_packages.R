@@ -9,7 +9,7 @@ if (Sys.info()["sysname"] == "Windows" & Sys.getenv("JAVA_HOME") == "") {
 tidyverse_packages <- c("tidyverse", "stringr")
 visualization_packages <- c("RColorBrewer", "pander", "scales",
                             "gridExtra", "ggbeeswarm", "corrplot",
-                            "ggfortify", "factoextra")
+                            "ggfortify", "factoextra", "GGally")
 modelling_packages <- c("e1071", "caret", "MASS")
 cluster_packages <- c("cluster", "mclust", "NbClust", "dbscan")
 
