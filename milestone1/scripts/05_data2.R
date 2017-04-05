@@ -26,3 +26,12 @@ df_year_perc[, 2:length(df_year_perc)] <- df_year_perc[, 2:length(df_year_perc)]
 df_year_perc <- reshape2::melt(df_year_perc, id.vars="release_decade")
 names(df_year_perc) <- c("release_decade", "genres", "percentage")
 df_year_perc <- df_year_perc[!is.na(df_year_perc$release_decade), ]
+
+# Colors
+colourCount2 <- length(unique(df_year_perc$genres))
+getPalette2 <- colorRampPalette(brewer.pal(12, "Paired"))
+
+# Reorder genres
+df_mean <- aggregate(percentage ~ genres, data=df_year_perc, FUN=mean)
+ordered_levels <- levels(df_mean$genres)[order(df_mean$percentage, decreasing=FALSE)]
+df_year_perc$genres <- factor(df_year_perc$genres, levels=ordered_levels)
