@@ -26,11 +26,12 @@ Log in to the AWS Console and click on the EC2 icon under Compute. Now setup a e
 ssh into the environment.
 
 ## Setup and run the bash script
-Run the bash script 
+Download and run the bash script 
 ```bash
-wget 
+wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup.sh.sh
+chmod +x setup.sh
+sudo ./setup.sh
 ```
-
 ## Add users for the RStudio environment
 ```bash
 sudo adduser <username>
