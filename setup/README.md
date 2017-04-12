@@ -20,10 +20,7 @@ From the region button on top right. Select US East (N.Virginia)
 
 
 ### Create instance
-
-- Search for “EC2” in the search bar. Click on “EC2” to start the EC2 wizard.
-- Click on the big blue “Launch instance” button
-
+Search for “EC2” in the search bar. Click on “EC2” to start the EC2 wizard.
 
 #### Step 1
 ![screen 1](/setup/img/step1.png "Screenshot 1")
@@ -59,8 +56,9 @@ Connect to the instance over ssh which establishes a terminal session to your ne
 Windows users may not have an ssh client installed. If you need ssh for Windows, download PuTTY (http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
 
 You will need to convert the .pem key from AWS into a .ppk key in PuTTY Key Generator
-●	Select Import Key under Conversions
-●	Save as Private Key with RSA selected
+- Select Import Key under Conversions
+- Save as Private Key with RSA selected
+
 ![putty key](/setup/img/image06.png "puTTY key generator")
 
 Launch PuTTY and you will see the below screen.  
@@ -90,7 +88,7 @@ ssh -i <your_ssh_keyfile> ubuntu@<your_AWS_public_DNS_name_or_IP_address>
 ## Setup and run the bash script
 Download and run the bash script 
 ```bash
-wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup.sh.sh
+wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup.sh
 chmod +x setup.sh
 sudo ./setup.sh
 ```
