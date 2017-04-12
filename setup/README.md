@@ -14,13 +14,13 @@ At the end of those instructions, you’ll have RStudio running in the cloud on 
 ## Deploying an EC2 instance
 Log in to the AWS Console and click on the EC2 icon under Compute. Now setup a environment.
 
-![screen 1](/img/step1.png "Screenshot 1")
-![screen 2](/img/step2.png "Screenshot 2")
-![screen 3](/img/step3.png "Screenshot 3")
-![screen 4](/img/step4.png "Screenshot 4")
-![screen 5](/img/step5.png "Screenshot 5")
-![screen 6](/img/step6.png "Screenshot 6")
-![screen 7](/img/step7.png "Screenshot 7")
+![screen 1](/setup/img/step1.png "Screenshot 1")
+![screen 2](/setup/img/step2.png "Screenshot 2")
+![screen 3](/setup/img/step3.png "Screenshot 3")
+![screen 4](/setup/img/step4.png "Screenshot 4")
+![screen 5](/setup/img/step5.png "Screenshot 5")
+![screen 6](/setup/img/step6.png "Screenshot 6")
+![screen 7](/setup/img/step7.png "Screenshot 7")
 
 ## Log into your virtual machine
 ssh into the environment.
