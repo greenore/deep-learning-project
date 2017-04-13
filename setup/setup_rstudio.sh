@@ -44,12 +44,15 @@ sudo apt install default-jdk -y
 sudo apt install git -y
 
 # Install MRO
-mkdir -p downloads
-cd downloads
-wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
-tar -xf microsoft-r-open-3.3.3.tar.gz
-cd microsoft-r-open/
-sudo ./install.sh -a -u
+# mkdir -p downloads
+# cd downloads
+# wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
+# tar -xf microsoft-r-open-3.3.3.tar.gz
+# cd microsoft-r-open/
+# sudo ./install.sh -a -u
+
+# Install R
+sudo apt install r-base r-base-dev
 
 ## Maybe run the following R command
 sudo R CMD javareconf
