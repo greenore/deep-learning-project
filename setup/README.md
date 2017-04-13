@@ -25,7 +25,7 @@ Search for “EC2” in the search bar. Click on “EC2” to start the EC2 wiza
 #### Step 2: Choose an Instance Type
 ![screen 2](/setup/img/step2.png "Screenshot 2")
 
-- Select the free tier t2.micro instance. This can be changed later on when more capacity is needed.
+- Select the free tier t2.micro instance. You're free to select a different one. This can also be changed later on when more capacity is needed. 
 
 #### Step 3: Configure Instance Details
 ![screen 3](/setup/img/step3.png "Screenshot 3")
@@ -100,22 +100,30 @@ Use the public IP of the running instance and username “ubuntu”.  For exampl
 ```bash
 ssh -i <your_ssh_keyfile> ubuntu@<your_AWS_public_DNS_name_or_IP_address>
 ```
-## Setup and run the bash script
+## Install RStudio Server
 Download and run the bash script 
 ```bash
-wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup.sh
-chmod +x setup.sh
-sudo ./setup.sh
+wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup_rstudio.sh
+chmod +x setup_rstudio.sh
+sudo ./setup_rstudio.sh
 ```
-## Add users for the RStudio environment
+### Add users for the RStudio environment
 ```bash
 sudo adduser <username>
 sudo adduser <username> sudo
 ```
-## Navigate to the RStudio Server
+### Navigate to the RStudio Server
 Start a local browser on your machine, and then navigate to the RStudio server running on AWS:
 
 https://<your_AWS_public_DNS_name_or_IP_address>:8787
 
 e.g.
 https://ec2-54-198-210-216.compute-1.amazonaws.com:8787
+
+## Install Anaconda
+Download and run the bash script 
+```bash
+wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup_anaconda.sh
+chmod +x setup_anaconda.sh
+sudo ./setup_anaconda.sh
+```
