@@ -56,13 +56,14 @@ sudo wget https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 sudo bash Anaconda2-4.3.1-Linux-x86_64.sh -b
 cd ..
 
-# Put conda3 to the path
+# Put conda2 to the path
 echo "" >> .profile
 echo "# Anaconda path" >> .profile
 echo "export PATH=~/anaconda2/bin:$PATH" >> .profile
 
 # Download jupyter config file
 mkdir -p .jupyter
+cd .jupyter
 wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/jupyter_notebook_config.py
 cd ..
 
