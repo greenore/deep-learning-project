@@ -40,9 +40,6 @@ sudo apt install texlive texlive-latex-extra -y
 # Install OpenJDK
 sudo apt install default-jdk -y
 
-## Maybe run the following R command
-sudo R CMD javareconf
-
 ## Git
 sudo apt install git -y
 
@@ -53,6 +50,9 @@ wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
 tar -xf microsoft-r-open-3.3.3.tar.gz
 cd microsoft-r-open/
 sudo ./install.sh -a -u
+
+## Maybe run the following R command
+sudo R CMD javareconf
 
 # Cleanup
 #--------
