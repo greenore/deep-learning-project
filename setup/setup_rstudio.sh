@@ -8,7 +8,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 # Install ssh-server
-sudo apt install openssh-server -y
+sudo apt install openssh-server libssl-dev libxml2-dev -y
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
@@ -26,15 +26,10 @@ sudo apt install libgeos-dev -y
 sudo apt install libiodbc2 libiodbc2-dev -y
 
 # R Dependencies
-sudo apt install libxft-dev -y
+sudo apt install libxft-dev autoconf automake autotools-dev bzip2-doc cdbs debhelper dh-strip-nondeterminism dh-translations gettext intltool intltool-debian libarchive-zip-perl libasprintf-dev libblas-common libblas-dev libblas3 libbz2-dev libcroco3 libfile-stripnondeterminism-perl libgettextpo-dev libgettextpo0 libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev liblapack-dev liblapack3 liblzma-dev libmail-sendmail-perl libncurses5-dev libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libreadline-dev libreadline6-dev libsys-hostname-long-perl libtinfo-dev libunistring0 m4 po-debconf python-pkg-resources python-scour python-six -y
 
-# Install MRO
-mkdir -p downloads
-cd downloads
-wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
-tar -xf microsoft-r-open-3.3.3.tar.gz
-cd microsoft-r-open/
-sudo ./install.sh -a -u
+# Fortran Dependencies
+sudo apt install gfortran -y
 
 ## Install system management
 sudo apt install htop -y
@@ -50,6 +45,14 @@ sudo R CMD javareconf
 
 ## Git
 sudo apt install git -y
+
+# Install MRO
+mkdir -p downloads
+cd downloads
+wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
+tar -xf microsoft-r-open-3.3.3.tar.gz
+cd microsoft-r-open/
+sudo ./install.sh -a -u
 
 # Cleanup
 #--------

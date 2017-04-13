@@ -127,3 +127,26 @@ wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/set
 chmod +x setup_anaconda.sh
 sudo ./setup_anaconda.sh
 ```
+
+## Fix language issues
+In order to fix certain language issues, append the following lines to the */etc/environment* file.
+```bash
+sudo nano /etc/environment
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+```
+
+## Enable Swapping
+It might be necessary to enable swapping. This is especially the case with the smaller instances. You can make the size of 1024 also bigger.
+```bash
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo chmod 600 /var/swap.1
+sudo /sbin/swapon /var/swap.1
+```
+In order to activate swapping at startup append the following line to the */etc/fsab* file.
+```bash
+sudo nano /etc/fstab
+swap        /var/swap.1 swap    defaults        0   0
+```

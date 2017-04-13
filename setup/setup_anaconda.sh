@@ -51,8 +51,20 @@ sudo apt clean -y
 mkdir -p downloads
 cd downloads
 sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
-sudo wget https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 sudo bash Anaconda3-4.3.1-Linux-x86_64.sh -b # Install anaconda3
-sudo bash Anaconda2-4.3.1-Linux-x86_64.sh -b # Install anaconda2
-export PATH=~/anaconda3/bin:$PATH            # Put conda3 to the path
-jupyter notebook --generate-config           # Generate config file
+cd ..
+
+# Put conda3 to the path
+echo "" >> .profile
+echo "# Anaconda path" >> .profile
+echo "export PATH=~/anaconda3/bin:$PATH" >> .profile
+
+# Download jupyter config file
+mkdir -p .jupyter
+wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/jupyter_notebook_config.py
+cd ..
+
+# Install python 2.7 kernel
+conda create -n ipykernel_py2 python=2 ipykernel -y
+source activate ipykernel_py2
+python -m ipykernel install --user
