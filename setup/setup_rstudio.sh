@@ -29,7 +29,7 @@ sudo apt install libiodbc2 libiodbc2-dev -y
 sudo apt install libxft-dev -y
 
 # Install MRO
-mkdir downloads
+mkdir -p downloads
 cd downloads
 wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
 tar -xf microsoft-r-open-3.3.3.tar.gz
