@@ -14,35 +14,50 @@ At the end of those instructions, you’ll have RStudio running in the cloud on 
 ## Deploying an EC2 instance
 Log in to the AWS console (https://aws.amazon.com) and click on the EC2 icon under Compute. 
 
-### Switch region
-From the region button on top right. Select US East (N.Virginia) 
-![switch region](/setup/img/image04.png "Switch region")
-
-
 ### Create instance
 Search for “EC2” in the search bar. Click on “EC2” to start the EC2 wizard.
 
-#### Step 1
+#### Step 1: Choose an Amazon Maschine Image (AMI)
 ![screen 1](/setup/img/step1.png "Screenshot 1")
 
-#### Step 2
+- Select the Ubuntu Server 16.04 image
+
+#### Step 2: Choose an Instance Type
 ![screen 2](/setup/img/step2.png "Screenshot 2")
 
-#### Step 3
-![screen 3](/setup/img/step3.png "Screenshot 3")
-- When using p2.xlarge, click on “Request Spot Instances”. Spot instances are significantly cheaper than normal instances. It is a way for Amazon to sell excess capacity at reduced prices.
-- (Optional) Click on “Enable CloudWatch Detailed Monitoring”. This will enable additional services like automatically shutting down an idle instance. You will be warned that additional charges may be incurred, which will go against your allotment. Consider it like buying insurance. 
+- Select the free tier t2.micro instance. This can be changed later on when more capacity is needed.
 
-#### Step 4
+#### Step 3: Configure Instance Details
+![screen 3](/setup/img/step3.png "Screenshot 3")
+
+- When using p2.xlarge, click on “Request Spot Instances”. Spot instances are significantly cheaper than normal instances. It is a way for Amazon to sell excess capacity at reduced prices.
+- (Optional) Click on “Enable CloudWatch Detailed Monitoring”. This will enable additional services like automatically shutting down an idle instance. You will be warned that additional charges may be incurred, which will go against your allotment. Consider it like buying insurance.
+- (Optional) Under Advanced Details a custom startup script can be run. This can be usefull, when you're behind a company firewall and the ssh port (22) is blocked. In order to circumvent this, the following bash/perl script can be run. It runs the ssh on port 443:
+
+```bash
+#!/bin/bash -ex
+perl -pi -e 's/^#?Port 22$/Port 22\nPort 443/' /etc/ssh/sshd_config
+service ssh restart
+```
+
+#### Step 4: Add Storage
 ![screen 4](/setup/img/step4.png "Screenshot 4")
 
-#### Step 5
+- The default SSD storage of 8 GB is sometimes not enough when installing all the cecessary software. That is why 30GB is chosen.
+
+#### Step 5: Add Tags
 ![screen 5](/setup/img/step5.png "Screenshot 5")
 
-#### Step 6
+- Nothing is changed/done here.
+
+#### Step 6: Configure Security Group
 ![screen 6](/setup/img/step6.png "Screenshot 6")
 
-#### Step 7
+- This is an important step. If the necessary ports are not opened, it isn't possible to connect to your RStudio/Anaconda Server.
+- The following ports are opened: 80 (HTTP), 22 (SSH), HTTPS (443), RStudio Port (8787), Jupyter Port (8888).
+- It is allowed to connect to them from any IP. It would also be possible to restrict the IP Range. 
+
+#### Step 7: Review Instance Launch
 ![screen 7](/setup/img/step7.png "Screenshot 7")
 - When you attempt to launch the instance it will ask if you have a keypair.
 - If you have not used SSH before and do not have a keypair, select “Create a new keypair”
