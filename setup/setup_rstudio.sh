@@ -54,6 +54,10 @@ sudo ./install.sh -a -u
 ## Maybe run the following R command
 sudo R CMD javareconf
 
+# Language dependencies
+sudo apt install gnustep-base-runtime -y
+defaults write org.R-project.R force.LANG en_US.UTF-8
+
 # Cleanup
 #--------
 sudo apt autoremove -y
