@@ -52,7 +52,7 @@ sudo apt install git -y
 # sudo ./install.sh -a -u
 
 # Install R
-sudo apt install r-base r-base-dev
+sudo apt install r-base r-base-dev -y
 
 ## Maybe run the following R command
 sudo R CMD javareconf
