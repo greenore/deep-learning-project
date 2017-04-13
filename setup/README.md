@@ -112,6 +112,20 @@ sudo ./setup_rstudio.sh
 sudo adduser <username>
 sudo adduser <username> sudo
 ```
+
+### Copy ssh key
+Copy the ssh key to the clipboard
+```bash
+cat ~/.ssh/authorized_keys
+su <username>
+cd ~
+mkdir .ssh
+chmod 700 .ssh
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+nano .ssh/authorized_keys
+```
+
 ### Navigate to the RStudio Server
 Start a local browser on your machine, and then navigate to the RStudio server running on AWS:
 
