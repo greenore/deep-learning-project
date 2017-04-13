@@ -141,6 +141,11 @@ wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/set
 chmod +x setup_anaconda.sh
 sudo ./setup_anaconda.sh
 ```
+## Run jupyter notebook
+To run jupyter notebook run the command below. The password is cs109b
+```bash
+jupyter notebook
+```
 
 ## Fix language issues
 In order to fix certain language issues, append the following lines to the */etc/environment* file.
