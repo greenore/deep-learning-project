@@ -53,13 +53,13 @@ cd downloads
 # sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
 # sudo bash Anaconda3-4.3.1-Linux-x86_64.sh -b # Install anaconda3
 sudo wget https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
-sudo bash Anaconda2-4.3.1-Linux-x86_64.sh
+sudo bash Anaconda2-4.3.1-Linux-x86_64.sh -b
 cd ..
 
 # Put conda3 to the path
 echo "" >> .profile
 echo "# Anaconda path" >> .profile
-echo "export PATH=~/anaconda3/bin:$PATH" >> .profile
+echo "export PATH=~/anaconda2/bin:$PATH" >> .profile
 
 # Download jupyter config file
 mkdir -p .jupyter
