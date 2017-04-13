@@ -47,7 +47,12 @@ sudo apt autoclean -y
 sudo apt clean -y
 
 # Anaconda
+#---------
 mkdir -p downloads
 cd downloads
-wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
-sudo bash Anaconda3-4.3.1-Linux-x86_64.sh 
+sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
+sudo wget https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
+sudo bash Anaconda3-4.3.1-Linux-x86_64.sh -b # Install anaconda3
+sudo bash Anaconda2-4.3.1-Linux-x86_64.sh -b # Install anaconda2
+export PATH=~/anaconda3/bin:$PATH            # Put conda3 to the path
+jupyter notebook --generate-config           # Generate config file

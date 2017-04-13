@@ -58,6 +58,7 @@ sudo apt autoclean -y
 sudo apt clean -y
 
 # RStudio Server
+#---------------
 sudo apt-get install gdebi-core -y
 cd ..
 wget https://download2.rstudio.org/rstudio-server-1.0.136-amd64.deb
