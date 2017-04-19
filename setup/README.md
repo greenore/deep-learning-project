@@ -135,7 +135,8 @@ e.g.
 https://ec2-54-198-210-216.compute-1.amazonaws.com:8787
 
 ## Install Anaconda
-Download and run the bash script 
+Download and run the bash script
+**Note:** Anaconda is not installed globaly but rather localy for every user. That means you should run the script below with the user you plan to work with.
 ```bash
 wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup_anaconda.sh
 chmod +x setup_anaconda.sh
