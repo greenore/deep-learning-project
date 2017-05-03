@@ -1,4 +1,4 @@
-# Final Submission
+# Final Project Submission
 **CS109B Project Group 29**<br>
 Calvin J Chiew, Ji Hua, Tim Hagmann<br>
 
