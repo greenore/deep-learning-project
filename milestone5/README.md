@@ -23,5 +23,5 @@ https://www.dropbox.com/sh/qt20u1fs2jcf9md/AABEYIxwYyTGG4h7mbrX3Evka?dl=0<br>
 - All updates are marked with [UPDATE]
 - No changes in Milestones 1 and 2 
 - Milestone 3: Added parameter tuning via cross-validation for random forest and kNN models. Generated new visualisations showing precision and recall of each model by genre. 
-- Milestone 4: Added section exploring predicted probabilities from the CNN model. Tried to determine optimal predicted probability thresholds for classification instead of using output layer.
+- Milestone 4: Added section exploring predicted probabilities from the CNN. Attempted to tune the optimal predicted probability thresholds for genre classification instead of using output layer.
 - Milestone 5: New notebook showing our attempts to use alternative methods to train the network in a bid to improve its precision and recall. Methods attempted include multi-class classification, binary classification for each genre, and multi-label classification with equal sample sizes per class.
