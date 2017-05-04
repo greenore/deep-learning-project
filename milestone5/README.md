@@ -20,7 +20,6 @@ https://www.dropbox.com/sh/qt20u1fs2jcf9md/AABEYIxwYyTGG4h7mbrX3Evka?dl=0<br>
 - Milestone 5: https://github.com/greenore/deep-learning-project/blob/master/milestone5/Milestone5.ipynb
 
 ## README on notebook updates
-- All updates are marked with [UPDATE]
 - No changes in Milestones 1 and 2 
 - Milestone 3: Added parameter tuning via cross-validation for random forest and kNN models. Generated new visualisations showing precision and recall of each model by genre. 
 - Milestone 4: Added section exploring predicted probabilities from the CNN. Attempted to tune the optimal predicted probability thresholds for genre classification instead of using output layer.
